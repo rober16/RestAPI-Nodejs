@@ -16,12 +16,11 @@ app.get('/movies', (req, res) => {
 
 // Ruta para obtener una tarea por su ID
 app.get('/movies/:id', (req, res) => {
-    const id = parseInt(req.params.id);
-    const movie = movies.find(movie => movie.id === id);
-    if (!movie) return res.status(404).json({ message: 'Pelicula no encontrada' });
-
-    res.json(movie);
-});
+    const { id } = req.params
+    const movie = movies.find(movie => movie.id === id)
+    if (movie) return res.json(movie)
+    res.status(404).json({ message: 'Movie not found' })
+  })
 
 // Iniciar el servidor
 app.listen(PORT, () => {
