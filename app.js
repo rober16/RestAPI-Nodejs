@@ -2,12 +2,33 @@ require('dotenv').config();
 const express = require('express');
 const crypto = require('node:crypto');
 const movies = require('./movies.json');
+const cors = require('cors')
 const { validateMovie, validatePartialMovie } = require('./schemas/movies')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json()); // Middleware para procesar los datos en formato JSON
+
+app.use(cors({
+    origin: (origin, callback) => {
+      const ACCEPTED_ORIGINS = [
+        'http://localhost:8080',
+        'http://localhost:4000'
+      ]
+  
+      if (ACCEPTED_ORIGINS.includes(origin)) {
+        return callback(null, true)
+      }
+  
+      if (!origin) {
+        return callback(null, true)
+      }
+  
+      return callback(new Error('Not allowed by CORS'))
+    }
+  }))
+
 app.disable('x-powered-by') //deshabilitar el header x-powered-by: Express
 
 //Ruta para obtener todas las peliculas o filtrar por genero
