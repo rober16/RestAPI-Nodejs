@@ -1,36 +1,150 @@
-[
-  {
-    "peliculas": [
-      {
-        "id": 1,
-        "titulo": "Titanic",
-        "año": 1997,
-        "poster_url": "https://images-na.ssl-images-amazon.com/images/I/717KH+f1fkL._AC_UL600_SR600,600_.jpg"
-      },
-      {
-        "id": 2,
-        "titulo": "El padrino",
-        "año": 1972,
-        "poster_url": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
-      },
-      {
-        "id": 3,
-        "titulo": "Matrix",
-        "año": 1999,
-        "poster_url": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
-      },
-      {
-        "id": 4,
-        "titulo": "El señor de los anillos: El retorno del Rey",
-        "año": 2003,
-        "poster_url": "https://m.media-amazon.com/images/I/81lD6R3Yu6L._AC_UF894,1000_QL80_.jpg"
-      },
-      {
-        "id": 5,
-        "titulo": "Forrest Gump",
-        "año": 1994,
-        "poster_url": "data:image/jpeg;base64,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"
-      }
-    ]
-  }  
-]
+[{
+  "id": "dcdd0fad-a94c-4810-8acc-5f108d3b18c3",
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "genre": ["Drama"],
+  "rate": 9.3
+},
+{
+  "id": "c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf",
+  "title": "The Dark Knight",
+  "year": 2008,
+  "director": "Christopher Nolan",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": ["Action", "Crime", "Drama"],
+  "rate": 9.0
+},
+{
+  "id": "5ad1a235-0d9c-410a-b32b-220d91689a08",
+  "title": "Inception",
+  "year": 2010,
+  "director": "Christopher Nolan",
+  "duration": 148,
+  "poster": "https://m.media-amazon.com/images/I/91Rc8cAmnAL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Action", "Adventure", "Sci-Fi"],
+  "rate": 8.8
+},
+{
+  "id": "241bf55d-b649-4109-af7c-0e6890ded3fc",
+  "title": "Pulp Fiction",
+  "year": 1994,
+  "director": "Quentin Tarantino",
+  "duration": 154,
+  "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+  "genre": ["Crime", "Drama"],
+  "rate": 8.9
+},
+{
+  "id": "9e6106f0-848b-4810-a11a-3d832a5610f9",
+  "title": "Forrest Gump",
+  "year": 1994,
+  "director": "Robert Zemeckis",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/qR8AAOSwkvRZzuMD/s-l1600.jpg",
+  "genre": ["Drama", "Romance"],
+  "rate": 8.8
+},
+{
+  "id": "7e3fd5ab-60ff-4ae2-92b6-9597f0308d1",
+  "title": "Gladiator",
+  "year": 2000,
+  "director": "Ridley Scott",
+  "duration": 155,
+  "poster": "https://img.fruugo.com/product/0/60/14417600_max.jpg",
+  "genre": ["Action", "Adventure", "Drama"],
+  "rate": 8.5
+},
+{
+  "id": "c906673b-3948-4402-ac7f-73ac3a9e3105",
+  "title": "The Matrix",
+  "year": 1999,
+  "director": "Lana Wachowski",
+  "duration": 136,
+  "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+  "genre": ["Action", "Sci-Fi"],
+  "rate": 8.7
+},
+{
+  "id": "b6e03689-cccd-478e-8565-d92f40813b13",
+  "title": "Interstellar",
+  "year": 2014,
+  "director": "Christopher Nolan",
+  "duration": 169,
+  "poster": "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Adventure", "Drama", "Sci-Fi"],
+  "rate": 8.6
+},
+{
+  "id": "aa391090-b938-42eb-b520-86ea0aa3917b",
+  "title": "The Lord of the Rings: The Return of the King",
+  "year": 2003,
+  "director": "Peter Jackson",
+  "duration": 201,
+  "poster": "https://i.ebayimg.com/images/g/0hoAAOSwe7peaMLW/s-l1600.jpg",
+  "genre": ["Action", "Adventure", "Drama"],
+  "rate": 8.9
+},
+{
+  "id": "2e6900e2-0b48-4fb6-ad48-09c7086e54fe",
+  "title": "The Lion King",
+  "year": 1994,
+  "director": "Roger Allers, Rob Minkoff",
+  "duration": 88,
+  "poster": "https://m.media-amazon.com/images/I/81BMmrwSFOL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Animation", "Adventure", "Drama"],
+  "rate": 8.5
+},
+{
+  "id": "04986507-b3ed-442c-8ae7-4c5df804f896",
+  "title": "The Avengers",
+  "year": 2012,
+  "director": "Joss Whedon",
+  "duration": 143,
+  "poster": "https://img.fruugo.com/product/7/41/14532417_max.jpg",
+  "genre": ["Action", "Adventure", "Sci-Fi"],
+  "rate": 8.0
+},
+{
+  "id": "7d2832f8-c70a-410e-8963-4c93bf36cc9c",
+  "title": "Jurassic Park",
+  "year": 1993,
+  "director": "Steven Spielberg",
+  "duration": 127,
+  "poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+  "genre": ["Adventure", "Sci-Fi"],
+  "rate": 8.1
+},
+{
+  "id": "ccf36f2e-8566-47f7-912d-9f4647250bc7",
+  "title": "Titanic",
+  "year": 1997,
+  "director": "James Cameron",
+  "duration": 195,
+  "poster": "https://i.pinimg.com/originals/42/42/65/4242658e6f1b0d6322a4a93e0383108b.png",
+  "genre": ["Drama", "Romance"],
+  "rate": 7.8
+},
+{
+  "id": "8fb17ae1-bdfe-45e5-a871-4772d7e526b8",
+  "title": "The Social Network",
+  "year": 2010,
+  "director": "David Fincher",
+  "duration": 120,
+  "poster": "https://i.pinimg.com/originals/7e/37/b9/7e37b994b613e94cba64f307b1983e39.jpg",
+  "genre": ["Biography", "Drama"],
+  "rate": 7.7
+},
+{
+  "id": "6a360a18-c645-4b47-9a7b-2a71babbf3e0",
+  "title": "Avatar",
+  "year": 2009,
+  "director": "James Cameron",
+  "duration": 162,
+  "poster": "https://i.etsystatic.com/35681979/r/il/dfe3ba/3957859451/il_fullxfull.3957859451_h27r.jpg",
+  "genre": ["Action", "Adventure", "Fantasy"],
+  "rate": 7.8
+}]
