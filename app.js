@@ -6,7 +6,7 @@ const cors = require('cors')
 const { validateMovie, validatePartialMovie } = require('./schemas/movies')
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json()); // Middleware para procesar los datos en formato JSON
 
