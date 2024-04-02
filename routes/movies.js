@@ -8,9 +8,13 @@ const movies = readJSON('./movies.js')
 export const moviesRouter = Router()
 
 moviesRouter.get('/', async (req, res) => {
-    const { genre } = req.query
-    const movies = await MovieModel.getAll({genre})
-    res.json(movies)
+    try{
+        const { genre } = req.query
+        const movies = await MovieModel.getAll({genre})
+        res.json(movies)
+    }catch(error){
+        res.status(500).json({message: error.message})
+    }
 })
 
 moviesRouter.get('/:id', async (req, res) => {
